@@ -1,0 +1,65 @@
+{
+  "name": "frontend-coding-test",
+  "version": "0.0.1",
+  "description": "Frontend coding test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/istvan-antal/frontend-coding-test.git"
+  },
+  "author": "István Antal <i@istvan.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/istvan-antal/frontend-coding-test/issues"
+  },
+  "homepage": "https://github.com/istvan-antal/frontend-coding-test#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^23.0.1"
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test)\\.mjs"
+    ],
+    "transform": {
+      "^.+\\.m?js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "mjs",
+      "json"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "es2015",
+            {
+              "modules": false
+            }
+          ]
+        ],
+        "plugins": [
+          [
+            "transform-es2015-modules-commonjs",
+            {
+              "spec": true
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
