@@ -33,22 +33,22 @@ export const deserialize = (obj) => {
 
     result[arrPropName] = [];
 
-    let propIdx = -1;
-    let z;
+    let startPropIndex = -1;
+    let objectInArrProp;
     separatedKeys.forEach(separatedKey=> {
         if(separatedKey.length > 1){
             const propWithIndex = separatedKey[0];
 
-            const y = Number(propWithIndex.match(/\d+/g)[0]);
+            const currentPropIndex = Number(propWithIndex.match(/\d+/g)[0]);
 
 
             let value = obj[separatedKey.join('_')];
-            if(y > propIdx){
-                propIdx = y;
-                z = { [separatedKey[1]] : parseValue(value)};
-                result[arrPropName].push(z);
+            if(currentPropIndex > startPropIndex){
+                startPropIndex = currentPropIndex;
+                objectInArrProp = { [separatedKey[1]] : parseValue(value)};
+                result[arrPropName].push(objectInArrProp);
             }else{
-                z[separatedKey[1]] = parseValue(value);
+                objectInArrProp[separatedKey[1]] = parseValue(value);
             }
         }
        else{
