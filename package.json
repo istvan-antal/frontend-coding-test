@@ -22,7 +22,8 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-es2015": "^6.24.1",
-    "jest": "^23.0.1"
+    "jest": "^23.0.1",
+    "lodash": "^4.17.15"
   },
   "jest": {
     "testMatch": [
