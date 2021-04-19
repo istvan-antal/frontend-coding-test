@@ -22,11 +22,12 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-preset-es2015": "^6.24.1",
+    "date-fns": "^2.0.1",
     "jest": "^23.0.1"
   },
   "jest": {
     "testMatch": [
-      "**/?(*.)+(spec|test)\\.mjs"
+      "**/?(*.)+(spec|test)\\/*.mjs"
     ],
     "transform": {
       "^.+\\.m?js$": "babel-jest"
